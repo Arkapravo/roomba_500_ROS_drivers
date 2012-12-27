@@ -12,7 +12,13 @@ These files are forked in from ISR - University of Coimbra repository of ROS pac
 
 Installation
 ------------
-ROS Electric or ROS Fuerte installation (http://ros.org/wiki) is needed for these packages. Build and install (rosmake) in order; _serial_communication_ first and then _roomba_robot_ and make sure that these are on the ROS PATH. 
+ROS Electric or ROS Fuerte installation (http://ros.org/wiki) is needed for these packages. Build and install; _serial_communication_ first and then _roomba_robot_  with the following respectively,
+
+  _rosmake cereal_port_   
+  
+  _rosmake roomba_500_series_
+
+and make sure that these are on the ROS PATH. 
 
 Controlling the robot
 ----------------------
