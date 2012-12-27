@@ -1,0 +1,14 @@
+<stack>
+  <description brief="serial_communication">
+  
+  	Serial port communication stack holding some useful tools for serial port communication, namely CerealPort, a serial port ROS library.
+  
+  </description>
+  <author>Gonçalo Cabrita and Pedro Sousa</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/serial_communication</url>
+  <depend stack="ros" />
+  <depend stack="ros_comm" /> <!-- roscpp -->
+
+</stack>

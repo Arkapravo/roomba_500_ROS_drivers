@@ -1,0 +1,8 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\section codeapi CerealPort Code API
+- \link cereal::CerealPort CerealPort (C++) \endlinks
+
+*/

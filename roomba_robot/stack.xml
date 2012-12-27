@@ -1,0 +1,15 @@
+<stack>
+  <description brief="roomba_robot">
+  
+  	iRobot Roomba robot stack.
+  
+  </description>
+  <author>Gonçalo Cabrita</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/roomba_robot</url>
+  <depend stack="ros" />			<!-- roscpp -->
+  <depend stack="common_msgs" /> 	<!-- nav_msgs, geometry_msgs -->
+  <depend stack="geometry" /> 		<!-- tf -->
+  
+</stack>
