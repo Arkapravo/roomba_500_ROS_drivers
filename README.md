@@ -47,3 +47,6 @@ Controlling the robot
 Testing
 -------
 Successfully tested on ROS Electric, version 1.6.9 installated on Ubuntu 10.04 LTS, Ubuntu 11.04 and Ubuntu 11.10
+
+ ![Image Alt](https://lh3.googleusercontent.com/-SHfhVb0WSBA/UPJI3loCziI/AAAAAAAACP0/eb5BD0kY-wY/s640/roomba_pic.jpg)
+
