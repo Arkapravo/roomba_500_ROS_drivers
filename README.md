@@ -42,11 +42,11 @@ Controlling the robot
 
  ![Image Alt](https://lh4.googleusercontent.com/-HRD10oHRNHE/UNzHyR7C9UI/AAAAAAAACMk/bDIPcuvgLhg/s641/roomba-a.png)
 
-* Now the robot can be controlled by ROS nodes, try teleoperation etc
+* Now the robot can be controlled by ROS nodes, try teleoperation etc. The tutorial has been tested on a Roomba 560, but it should work on most of the Roomba 500 series robots.
 
 Testing
 -------
-Successfully tested on ROS Electric, version 1.6.9 installated on Ubuntu 10.04 LTS, Ubuntu 11.04 and Ubuntu 11.10
+Successfully tested on Roomba 560 with a ROS Electric, version 1.6.9 installated on Ubuntu 10.04 LTS, Ubuntu 11.04 and Ubuntu 11.10
 
  ![Image Alt](https://lh3.googleusercontent.com/-SHfhVb0WSBA/UPJI3loCziI/AAAAAAAACP0/eb5BD0kY-wY/s640/roomba_pic.jpg)
 
