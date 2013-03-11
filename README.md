@@ -36,7 +36,11 @@ Controlling the robot
 
 * Start an instance of the master and in another terminal window type in  
 
-  _rosrun roomba_500_series roomba560_node_     
+  _rosrun roomba_500_series roomba560_node_
+  
+  or alternatively,
+  
+  _rosrun roomba_500_series roomba500_light_node_
   
   that should make the lights of the robot go off and give an output as this,
 
@@ -46,7 +50,19 @@ Controlling the robot
 
 Testing
 -------
-Successfully tested on Roomba 560 with a ROS Electric, version 1.6.9 installated on Ubuntu 10.04 LTS, Ubuntu 11.04 and Ubuntu 11.10
+(1) On Roomba 560
+
+By Arkapravo Bhaumik (arkapravobhaumik@gmail.com) and Koushik Kabiraj (koushik.atti@gmail.com)
+
+On a ROS Electric installation (Ubuntu 10.04 LTS, Ubuntu 11.04 and Ubuntu 11.10)
 
  ![Image Alt](https://lh3.googleusercontent.com/-SHfhVb0WSBA/UPJI3loCziI/AAAAAAAACP0/eb5BD0kY-wY/s640/roomba_pic.jpg)
 
+(2) On Roomba 521
+
+By Devasena Prasad (devasena.prasad@gmail.com)
+
+On a ROS Groovy installation (Ubuntu 12.04)
+
+* Permission for USB must be changed using sudo chmod 777 /dev/ttyUSB*
+* roomba500_light_node works fine
