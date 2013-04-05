@@ -81,10 +81,10 @@ By Devasena Prasad (devasena.prasad@gmail.com)
 
 On a ROS Groovy installation (Ubuntu 12.04)
 
-1. Permission for USB must be changed using 
+* Permission for USB must be changed using 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 sudo chmod 777 /dev/ttyUSB*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-2. roomba500_light_node works fine
+* roomba500_light_node works fine
