@@ -88,3 +88,6 @@ sudo chmod 777 /dev/ttyUSB*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * roomba500_light_node works fine
+
+ ![Image Alt](https://lh6.googleusercontent.com/-L1acbLNMJt8/UV7fnSsusHI/AAAAAAAAClM/051hif2NM_A/w322-h428-p-o/Photo0502.jpg)
+
