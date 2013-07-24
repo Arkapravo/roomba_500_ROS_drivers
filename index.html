@@ -28,37 +28,99 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1>
+<a name="roomba_500_ros_drivers" class="anchor" href="#roomba_500_ros_drivers"><span class="octicon octicon-link"></span></a>roomba_500_ROS_drivers</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>ROS drivers for the roomba 500 series robots</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h2>
+<a name="fork-in" class="anchor" href="#fork-in"><span class="octicon octicon-link"></span></a>Fork in</h2>
+
+<p>These files are forked in from ISR - University of Coimbra repository of ROS packages,<a href="https://code.google.com/p/isr-uc-ros-pkg/">https://code.google.com/p/isr-uc-ros-pkg/</a>,<br>
+(1) <em>roomba_robot</em> -- <a href="http://isr-uc-ros-pkg.googlecode.com/svn/stacks/roomba_robot/trunk/roomba_500_series/">http://isr-uc-ros-pkg.googlecode.com/svn/stacks/roomba_robot/trunk/roomba_500_series/</a> (revision 484)<br>
+(2) <em>serial_communication</em> -- <a href="http://isr-uc-ros-pkg.googlecode.com/svn/stacks/serial_communication/">http://isr-uc-ros-pkg.googlecode.com/svn/stacks/serial_communication/</a> (revision 484)   </p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>ROS Electric or ROS Fuerte installation (<a href="http://ros.org/wiki">http://ros.org/wiki</a>) is needed for these packages. Build and install; <em>serial_communication</em> first and then <em>roomba_robot</em>  with the following respectively,</p>
+
+<pre><code>rosmake cereal_port
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>and </p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<pre><code>rosmake roomba_500_series
+</code></pre>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>and make sure that these are on the ROS PATH. </p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<h2>
+<a name="controlling-the-robot" class="anchor" href="#controlling-the-robot"><span class="octicon octicon-link"></span></a>Controlling the robot</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<ul>
+<li>Step One</li>
+</ul><p>Connect the Roomba with the computer using a FTDI USB cable (<a href="http://store.iheartengineering.com/ihe-0202-0000-0000.html">http://store.iheartengineering.com/ihe-0202-0000-0000.html</a>), Bluetooth connectivity will also suffice. To check for the port and connection of the FTDI USB cable, type in    </p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<pre><code>dmesg | grep tty
+</code></pre>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>in the terminal window, it should give output as this,</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p><img src="https://lh3.googleusercontent.com/-_ENNma4SY58/UNzHydm9jaI/AAAAAAAACMc/9DuX1gaMLQo/s748/roomba-b.png" alt="Image Alt"></p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<ul>
+<li>Step Two</li>
+</ul><p>Switch on the robot, the CLEAN button will have a light on</p>
+
+<p><img src="https://lh5.googleusercontent.com/-n5mU-b1D3rc/UNzHyTT7uLI/AAAAAAAACMg/za72x4dNqmk/s450/roomba-e.jpg" alt="Image Alt"></p>
+
+<ul>
+<li>Step Three</li>
+</ul><p>Start an instance of the master and in another terminal window type in  </p>
+
+<pre><code>rosrun roomba_500_series roomba560_node
+</code></pre>
+
+<p>the above node is specifically made for Roomba 560 robot, for any other model consider trying out the following,</p>
+
+<pre><code>rosrun roomba_500_series roomba500_light_node
+</code></pre>
+
+<p>that should make the lights of the robot go off and give an output as this,</p>
+
+<p><img src="https://lh4.googleusercontent.com/-HRD10oHRNHE/UNzHyR7C9UI/AAAAAAAACMk/bDIPcuvgLhg/s641/roomba-a.png" alt="Image Alt"></p>
+
+<p>Now the robot can be controlled by ROS nodes, try teleoperation etc.</p>
+
+<h2>
+<a name="testing-on-roomba-560" class="anchor" href="#testing-on-roomba-560"><span class="octicon octicon-link"></span></a>Testing on Roomba 560</h2>
+
+<p>By Arkapravo Bhaumik (<a href="mailto:arkapravobhaumik@gmail.com">arkapravobhaumik@gmail.com</a>) and Koushik Kabiraj (<a href="mailto:koushik.atti@gmail.com">koushik.atti@gmail.com</a>)</p>
+
+<p>On a ROS Electric installation (Ubuntu 10.04 LTS, Ubuntu 11.04 and Ubuntu 11.10)</p>
+
+<p><img src="https://lh3.googleusercontent.com/-SHfhVb0WSBA/UPJI3loCziI/AAAAAAAACP0/eb5BD0kY-wY/s640/roomba_pic.jpg" alt="Image Alt"></p>
+
+<h2>
+<a name="testing-on-roomba-521" class="anchor" href="#testing-on-roomba-521"><span class="octicon octicon-link"></span></a>Testing on Roomba 521</h2>
+
+<p>By Devasena Prasad (<a href="mailto:devasena.prasad@gmail.com">devasena.prasad@gmail.com</a>)</p>
+
+<p>On a ROS Groovy installation (Ubuntu 12.04)</p>
+
+<ul>
+<li>Permission for USB must be changed using </li>
+</ul><pre><code>sudo chmod 777 /dev/ttyUSB*
+</code></pre>
+
+<ul>
+<li>
+<p>roomba500_light_node works fine</p>
+
+<p><img src="https://lh6.googleusercontent.com/-L1acbLNMJt8/UV7fnSsusHI/AAAAAAAAClM/051hif2NM_A/w322-h428-p-o/Photo0502.jpg" alt="Image Alt"></p>
+</li>
+</ul>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/Arkapravo">Arkapravo</a></p>
