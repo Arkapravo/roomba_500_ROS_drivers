@@ -35,34 +35,37 @@
 
 <p>ROS drivers for the roomba 500 series robots</p>
 
-<h2>
-<a name="fork-in" class="anchor" href="#fork-in"><span class="octicon octicon-link"></span></a>Fork in</h2>
+<h1>
+<a name="fork-in" class="anchor" href="#fork-in"><span class="octicon octicon-link"></span></a>Fork in</h1>
 
-<p>These files are forked in from ISR - University of Coimbra repository of ROS packages at <a href="https://code.google.com/p/isr-uc-ros-pkg/">https://code.google.com/p/isr-uc-ros-pkg/</a>,<br>
+<p>The following two ROS packages are forked in from ISR - University of Coimbra repository; <a href="https://code.google.com/p/isr-uc-ros-pkg/">https://code.google.com/p/isr-uc-ros-pkg/</a><br>
 (1) <em>roomba_robot</em><br>
 (2) <em>serial_communication</em> </p>
 
-<h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+<h1>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h1>
 
-<p>ROS Electric or ROS Fuerte installation (<a href="http://ros.org/wiki">http://ros.org/wiki</a>) is needed for these packages. Build and install; <em>serial_communication</em> first and then <em>roomba_robot</em>  with the following respectively,</p>
+<p>ROS Electric or ROS Fuerte installation (<a href="http://ros.org/wiki">http://ros.org/wiki</a>) is needed for these packages. Build and install </p>
+
+<p><em>serial_communication</em> with </p>
 
 <pre><code>rosmake cereal_port
 </code></pre>
 
-<p>and </p>
+<p>and <em>roomba_robot</em> with</p>
 
 <pre><code>rosmake roomba_500_series
 </code></pre>
 
 <p>and make sure that these are on the ROS PATH. </p>
 
-<h2>
-<a name="controlling-the-robot" class="anchor" href="#controlling-the-robot"><span class="octicon octicon-link"></span></a>Controlling the robot</h2>
+<h1>
+<a name="interfacing-the-robot" class="anchor" href="#interfacing-the-robot"><span class="octicon octicon-link"></span></a>Interfacing the robot</h1>
 
-<ul>
-<li>Step One</li>
-</ul><p>Connect the Roomba with the computer using a FTDI USB cable (<a href="http://store.iheartengineering.com/ihe-0202-0000-0000.html">http://store.iheartengineering.com/ihe-0202-0000-0000.html</a>), Bluetooth connectivity will also suffice. To check for the port and connection of the FTDI USB cable, type in    </p>
+<h2>
+<a name="step-one" class="anchor" href="#step-one"><span class="octicon octicon-link"></span></a>Step One</h2>
+
+<p>Connect the Roomba with the computer using a FTDI USB cable, Bluetooth connectivity will also suffice. To check for the port and connection of the FTDI USB cable, type in    </p>
 
 <pre><code>dmesg | grep tty
 </code></pre>
@@ -71,15 +74,19 @@
 
 <p><img src="https://lh3.googleusercontent.com/-_ENNma4SY58/UNzHydm9jaI/AAAAAAAACMc/9DuX1gaMLQo/s748/roomba-b.png" alt="Image Alt"></p>
 
-<ul>
-<li>Step Two</li>
-</ul><p>Switch on the robot, the CLEAN button will have a light on</p>
+<p>this confirms that the FTDI USB cable has been interfaced with the computer.</p>
+
+<h2>
+<a name="step-two" class="anchor" href="#step-two"><span class="octicon octicon-link"></span></a>Step Two</h2>
+
+<p>Switch on the robot, the CLEAN button will have a light on</p>
 
 <p><img src="https://lh5.googleusercontent.com/-n5mU-b1D3rc/UNzHyTT7uLI/AAAAAAAACMg/za72x4dNqmk/s450/roomba-e.jpg" alt="Image Alt"></p>
 
-<ul>
-<li>Step Three</li>
-</ul><p>Start an instance of the master and in another terminal window type in  </p>
+<h2>
+<a name="step-three" class="anchor" href="#step-three"><span class="octicon octicon-link"></span></a>Step Three</h2>
+
+<p>Start an instance of the master and in another terminal window type in  </p>
 
 <pre><code>rosrun roomba_500_series roomba560_node
 </code></pre>
@@ -95,8 +102,11 @@
 
 <p>Now the robot can be controlled by ROS nodes, try teleoperation etc.</p>
 
+<h1>
+<a name="testing" class="anchor" href="#testing"><span class="octicon octicon-link"></span></a>Testing</h1>
+
 <h2>
-<a name="testing-on-roomba-560" class="anchor" href="#testing-on-roomba-560"><span class="octicon octicon-link"></span></a>Testing on Roomba 560</h2>
+<a name="on-roomba-560" class="anchor" href="#on-roomba-560"><span class="octicon octicon-link"></span></a>on Roomba 560</h2>
 
 <p>By Arkapravo Bhaumik (<a href="mailto:arkapravobhaumik@gmail.com">arkapravobhaumik@gmail.com</a>) and Koushik Kabiraj (<a href="mailto:koushik.atti@gmail.com">koushik.atti@gmail.com</a>)</p>
 
@@ -105,24 +115,20 @@
 <p><img src="https://lh3.googleusercontent.com/-SHfhVb0WSBA/UPJI3loCziI/AAAAAAAACP0/eb5BD0kY-wY/s640/roomba_pic.jpg" alt="Image Alt"></p>
 
 <h2>
-<a name="testing-on-roomba-521" class="anchor" href="#testing-on-roomba-521"><span class="octicon octicon-link"></span></a>Testing on Roomba 521</h2>
+<a name="on-roomba-521" class="anchor" href="#on-roomba-521"><span class="octicon octicon-link"></span></a>on Roomba 521</h2>
 
 <p>By Devasena Prasad (<a href="mailto:devasena.prasad@gmail.com">devasena.prasad@gmail.com</a>)</p>
 
 <p>On a ROS Groovy installation (Ubuntu 12.04)</p>
 
-<ul>
-<li>Permission for USB must be changed using </li>
-</ul><pre><code>sudo chmod 777 /dev/ttyUSB*
+<p>Permission for USB must be changed using </p>
+
+<pre><code>sudo chmod 777 /dev/ttyUSB*
 </code></pre>
 
-<ul>
-<li>
 <p>roomba500_light_node works fine</p>
 
 <p><img src="https://lh6.googleusercontent.com/-L1acbLNMJt8/UV7fnSsusHI/AAAAAAAAClM/051hif2NM_A/w322-h428-p-o/Photo0502.jpg" alt="Image Alt"></p>
-</li>
-</ul>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/Arkapravo">Arkapravo</a></p>
